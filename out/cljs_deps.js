@@ -116,8 +116,13 @@ goog.addDependency("../process/env.js", ['process.env'], ['cljs.core']);
 goog.addDependency("debug/errorhandler.js", ['goog.debug.ErrorHandler', 'goog.debug.ErrorHandler.ProtectedFunctionError'], ['goog.Disposable', 'goog.asserts', 'goog.debug.EntryPointMonitor', 'goog.debug.Error']);
 goog.addDependency("events/eventwrapper.js", ['goog.events.EventWrapper'], []);
 goog.addDependency("events/eventlike.js", ['goog.events.EventLike'], []);
-goog.addDependency("../marubatsu/util.js", ['marubatsu.util'], ['cljs.core']);
-goog.addDependency("../marubatsu/computer.js", ['marubatsu.computer'], ['cljs.core']);
+
+// [260501:gima]=====================
+goog.addDependency("../../marubatsu/out/marubatsu/util.js", ['marubatsu.util'], ['cljs.core']);
+goog.addDependency("../../marubatsu/out/marubatsu/computer.js", ['marubatsu.computer'], ['cljs.core']);
+goog.addDependency("../../marubatsu/out/marubatsu/core.js", ['marubatsu.core'], ['marubatsu.util', 'marubatsu.computer', 'cljs.core.async', 'cljs.core']);
+//====================================
+
 goog.addDependency("../cljs/core/async/impl/protocols.js", ['cljs.core.async.impl.protocols'], ['cljs.core']);
 goog.addDependency("../cljs/core/async/impl/buffers.js", ['cljs.core.async.impl.buffers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async/impl/dispatch.js", ['cljs.core.async.impl.dispatch'], ['cljs.core', 'cljs.core.async.impl.buffers', 'goog.async.nextTick']);
@@ -125,4 +130,3 @@ goog.addDependency("../cljs/core/async/impl/channels.js", ['cljs.core.async.impl
 goog.addDependency("../cljs/core/async/impl/ioc_helpers.js", ['cljs.core.async.impl.ioc_helpers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async/impl/timers.js", ['cljs.core.async.impl.timers'], ['cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async.js", ['cljs.core.async'], ['cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core', 'cljs.core.async.impl.buffers', 'cljs.core.async.impl.protocols', 'cljs.core.async.impl.ioc_helpers', 'goog.array', 'cljs.core.async.impl.timers']);
-goog.addDependency("../marubatsu/core.js", ['marubatsu.core'], ['marubatsu.util', 'marubatsu.computer', 'cljs.core.async', 'cljs.core']);
