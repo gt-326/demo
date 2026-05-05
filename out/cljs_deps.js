@@ -118,9 +118,16 @@ goog.addDependency("events/eventwrapper.js", ['goog.events.EventWrapper'], []);
 goog.addDependency("events/eventlike.js", ['goog.events.EventLike'], []);
 
 // [260501:gima]=====================
+
 goog.addDependency("../../marubatsu/out/marubatsu/util.js", ['marubatsu.util'], ['cljs.core']);
 goog.addDependency("../../marubatsu/out/marubatsu/computer.js", ['marubatsu.computer'], ['cljs.core']);
 goog.addDependency("../../marubatsu/out/marubatsu/core.js", ['marubatsu.core'], ['marubatsu.util', 'marubatsu.computer', 'cljs.core.async', 'cljs.core']);
+
+// [260505:gima]=====================
+
+goog.addDependency("../../life/out/life/util.js", ['life.util'], ['cljs.core']);
+goog.addDependency("../../life/out/life/core.js", ['life.core'], ['clojure.string', 'life.util', 'cljs.core']);
+
 //====================================
 
 goog.addDependency("../cljs/core/async/impl/protocols.js", ['cljs.core.async.impl.protocols'], ['cljs.core']);
